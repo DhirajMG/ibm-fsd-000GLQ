@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title>Trainer</title>
+        <style>
+            .container{overflow: hidden}
+            .tab{float: left;}
+            .tab-2{margin-left: 50px}
+            .tab-2 input{display: block;margin-bottom: 10px}
+            tr{transition:all .25s ease-in-out}
+            tr:hover{background-color:#EEE;cursor: pointer}
+        </style>
+    </head>
+    <body>     
+        <div class="container">
+            <div class="tab tab-1">
+                <table id="table" border="1">   
+                    <legend>Trainer Details</legend><br />
+                    <tr>
+                        <th>Name</th>
+                        <th>Sub 1</th>
+                        <th>Sub 2</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="tab tab-2">
+                Name :<input type="text" name="name" id="name">
+                Sub 1 :<input type="text" name="sub1" id="sub1">
+                Sub 2 :<input type="text" name="sub2" id="sub2">
+                
+                <button id="add" onclick="addHtmlTableRow();">Add</button>
+                <button onclick="editHtmlTbleSelectedRow();">Edit</button>
+                <button onclick="removeSelectedRow();">Remove</button>
+            </div>
+        </div>
+        <script>      
+            var rIndex,
+                table = document.getElementById("table");
+            // check the empty input
+            function checkEmptyInput()
+            {
+                var isEmpty = false,
+                    name = document.getElementById("name").value,
+                    sub1 = document.getElementById("sub1").value,
+                    sub2 = document.getElementById("sub2").value;
+            
+                if(name === ""){
+                    alert("Name Cannot Be Empty");
+                    isEmpty = true;
+                }
+                else if(sub1 === ""){
+                    alert("Sub 1 Cannot Be Empty");
+                    isEmpty = true;
+                }
+                else if(sub2 === ""){
+                    alert("Sub 2 Cannot Be Empty");
+                    isEmpty = true;
+                }
+                return isEmpty;
+            }
+            
+            // add Row
+            function addHtmlTableRow()
+            {
+                // get the table by id
+                // create a new row and cells
+                // get value from input text
+                // set the values into row cell's
+                if(!checkEmptyInput()){
+                var newRow = table.insertRow(table.length),
+                    cell1 = newRow.insertCell(0),
+                    cell2 = newRow.insertCell(1),
+                    cell3 = newRow.insertCell(2),
+                    name = document.getElementById("name").value,
+                    sub1 = document.getElementById("sub1").value,
+                    sub2 = document.getElementById("sub2").value;
+            
+                cell1.innerHTML = name;
+                cell2.innerHTML = sub1;
+                cell3.innerHTML = sub2;
+                // call the function to set the event to the new row
+                selectedRowToInput();
+            }
+            }
+            
+            // display selected row data into input text
+            function selectedRowToInput()
+            {
+                
+                for(var i = 1; i < table.rows.length; i++)
+                {
+                    table.rows[i].onclick = function()
+                    {
+                      // get the selected row index
+                      rIndex = this.rowIndex;
+                      document.getElementById("name").value = this.cells[0].innerHTML;
+                      document.getElementById("sub1").value = this.cells[1].innerHTML;
+                      document.getElementById("sub2").value = this.cells[2].innerHTML;
+                    };
+                }
+            }
+            selectedRowToInput();
+            
+            function editHtmlTbleSelectedRow()
+            {
+                var name = document.getElementById("name").value,
+                    sub1 = document.getElementById("sub1").value,
+                    sub2 = document.getElementById("sub2").value;
+               if(!checkEmptyInput()){
+                table.rows[rIndex].cells[0].innerHTML = name;
+                table.rows[rIndex].cells[1].innerHTML = sub1;
+                table.rows[rIndex].cells[2].innerHTML = sub2;
+              }
+            }
+            
+            function removeSelectedRow()
+            {
+                table.deleteRow(rIndex);
+                // clear input text
+                document.getElementById("name").value = "";
+                document.getElementById("sub1").value = "";
+                document.getElementById("sub2").value = "";
+            }
+        </script> 
+    </body>
+</html>
