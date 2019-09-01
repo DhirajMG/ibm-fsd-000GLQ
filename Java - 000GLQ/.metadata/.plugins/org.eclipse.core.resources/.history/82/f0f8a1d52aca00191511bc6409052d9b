@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>process page...</title>
+</head>
+<body>
+Hello <%=request.getParameter("name") %><br>
+Address is <%=request.getParameter("name") %><br>
+Salary is <%=request.getParameter("name") %>
+</body>
+</html>

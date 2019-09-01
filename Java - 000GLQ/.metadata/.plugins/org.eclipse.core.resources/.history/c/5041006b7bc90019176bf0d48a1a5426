@@ -1,0 +1,76 @@
+package comm.filter;
+
+import java.io.IOException;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.servlet.DispatcherType;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+
+import com.sun.corba.se.pept.transport.Connection;
+
+import comm.servlet.EmployeeDao;
+
+/**
+ * Servlet Filter implementation class Filter
+ */
+@WebFilter(dispatcherTypes = {
+				DispatcherType.REQUEST, 
+				DispatcherType.FORWARD, 
+				DispatcherType.INCLUDE, 
+				DispatcherType.ERROR
+		}
+					, urlPatterns = { "/employee_add" })
+public class Filter implements javax.servlet.Filter {
+
+    /**
+     * Default constructor. 
+     */
+    public Filter() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see Filter#destroy()
+	 */
+	public void destroy() {
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
+	 */
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		int status;
+		System.out.println("Inside filter");
+		String email = request.getParameter("email").toString();
+		java.sql.Connection connection = EmployeeDao.getConnection();
+		PreparedStatement pst;
+		try {
+			pst = connection.prepareStatement("select * from emps where email = ?");
+			pst.setString(1, email);
+			ResultSet rs = pst.executeQuery();
+			if(rs.getString(4)==email)
+			{
+				chain.doFilter(request, response);
+			}
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	/**
+	 * @see Filter#init(FilterConfig)
+	 */
+	public void init(FilterConfig fConfig) throws ServletException {
+		// TODO Auto-generated method stub
+	}
+
+}

@@ -1,0 +1,5 @@
+<h2><font color="black">Hello, ${param.name}</font></h2>
+<br>
+<h2><font color="black">Hello, ${param.address}</font></h2>
+<br>
+<h2><font color="black">Hello, ${param.salary}</font></h2>

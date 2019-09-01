@@ -1,0 +1,25 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<html>
+    <head><title>Hello</title></head>
+    <body bgcolor="white">
+       
+        <h2>Enter Employee Details</h2>
+        <form method="get">
+            Name:<input type="text" name="name" size="25"><br>
+            Address:<input type="text" name="address" size="25"><br>
+            Salary:<input type="number" name="salary" size="25">
+            <p></p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+
+        <c:if test="${fn:length(param.name) > 0}" >
+            <jsp:include page="response1.jsp"/>
+                  
+        </c:if>
+        
+            
+    </body>
+</html>

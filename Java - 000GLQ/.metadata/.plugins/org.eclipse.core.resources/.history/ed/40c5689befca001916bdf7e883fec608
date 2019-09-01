@@ -1,0 +1,24 @@
+package com.ibm.fsd.my_first_maven_demo;
+
+import javax.security.auth.login.Configuration;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        SessionFactory factory = (SessionFactory)new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Employee.class).buildSessionFactory();
+        Session session = factory.openSession();
+        session.getTransaction().begin();
+        Employee emp = new Employee("Dhiraj","password","dmg@gg.com","India");
+        session.persist(emp);
+        session.getTransaction().commit();
+    }
+}

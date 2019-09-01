@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee</title>
+</head>
+<body>
+<h2>Add New Employee</h2>
+<br>
+<form id="form-1" action="add_league.do" method="post">
+	
+		<label for="input-1">Name:</label>
+		<input id="input-1" name="title" required="true" type="text"/><br/>
+		<label for="input-2">Password</label>
+		<input id="input-2" name="year" "true" type="password"/><br/>
+		<label for="input-3">Email:</label>
+		<input id="input-3" name="title" required="true" type="text"/><br/>
+		<label for="input-4">Country</label>
+		<select name="season">
+		<option value="Unknmown">Select...</option>
+		<option value="Summer">India</option>
+		<option value="Winter">Australia</option>
+		<option value="Autumn">Malaysia</option>
+		<option value="Spring">China</option>
+		</select><br/>
+		<input type="submit" value="Add Employee" id="button-1"/>
+	</form>
+	<br>
+<a href="employee_view">View Employees</a> 
+</body>
+</html>
