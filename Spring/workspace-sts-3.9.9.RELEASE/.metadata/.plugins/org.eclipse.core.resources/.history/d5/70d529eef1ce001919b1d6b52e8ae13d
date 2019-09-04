@@ -1,0 +1,10 @@
+package org.springFramework.spring_demo;
+
+public class FortuneServiceImpl implements FortuneService {
+
+	public String getDailyFortuneServide() {
+		
+		return "Today is your lucky day";
+	}
+
+}

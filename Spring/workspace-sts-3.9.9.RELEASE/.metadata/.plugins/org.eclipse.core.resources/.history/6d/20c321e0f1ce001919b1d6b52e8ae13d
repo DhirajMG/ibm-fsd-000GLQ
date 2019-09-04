@@ -1,0 +1,10 @@
+package org.springFramework.spring_demo;
+
+public class FortuneServiceImpl implements FortuneService {
+
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
