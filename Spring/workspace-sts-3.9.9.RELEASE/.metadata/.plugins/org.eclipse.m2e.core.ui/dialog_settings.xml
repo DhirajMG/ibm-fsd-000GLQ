@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\B4ibmjava24\Desktop\Node\ibm-fsd-000GLQ\Spring\workspace-sts-3.9.9.RELEASE\mvc-demo1"/>
+			<item value="C:\Users\B4ibmjava24\Desktop\Node\ibm-fsd-000GLQ\Spring\workspace-sts-3.9.9.RELEASE\mvc-demo"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -25,12 +27,20 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="org.springFramework.comm.mvc_demo"/>
+			<item value="org.springFramework.mvc_demo1"/>
+			<item value="org.springFramework.mvc_demo"/>
+			<item value="org.springFramework.datasource_demo"/>
 			<item value="org.springFramework.spring_demo"/>
 		</list>
 		<list key="groupId">
 			<item value="org.springFramework"/>
 		</list>
 		<list key="artifactId">
+			<item value="comm.mvc_demo"/>
+			<item value="mvc-demo1"/>
+			<item value="mvc-demo"/>
+			<item value="datasource-demo"/>
 			<item value="spring_demo"/>
 		</list>
 		<list key="projectNameTemplate">
