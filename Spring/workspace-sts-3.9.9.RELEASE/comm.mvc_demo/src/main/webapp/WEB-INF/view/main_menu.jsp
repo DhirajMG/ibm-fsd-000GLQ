@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-Welcome to mvc demo!
+<a href="showView">Hello world form</a>
 </body>
 </html>
