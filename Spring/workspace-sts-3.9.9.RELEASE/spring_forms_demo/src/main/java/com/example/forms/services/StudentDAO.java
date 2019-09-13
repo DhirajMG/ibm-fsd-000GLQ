@@ -34,12 +34,12 @@ public void setJtemplate(Jtemlete jtemplate) {
 		System.out.println("Inserted..!");
 		
 	}
-
+	
 	public  List<Student> getStudent() {
 		String query="select * from student";
 		return jtemplate.query(query ,new StudentMapper());
 				
 	}
 
-
+                      
 }

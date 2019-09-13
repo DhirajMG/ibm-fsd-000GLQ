@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\B4ibmjava24\Desktop\Node\ibm-fsd-000GLQ\Spring\workspace-sts-3.9.9.RELEASE\spring-rest"/>
+			<item value="C:\Users\B4ibmjava24\Desktop\Node\ibm-fsd-000GLQ\Spring\workspace-sts-3.9.9.RELEASE\spring-mvc-customer-app"/>
 			<item value="C:\Users\B4ibmjava24\Desktop\Node\ibm-fsd-000GLQ\Spring\workspace-sts-3.9.9.RELEASE\mvc-demo1"/>
 			<item value="C:\Users\B4ibmjava24\Desktop\Node\ibm-fsd-000GLQ\Spring\workspace-sts-3.9.9.RELEASE\mvc-demo"/>
 		</list>
@@ -27,6 +29,11 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="org.springFramework.spring_security_demo"/>
+			<item value="org.springFramework.spring_rest_crm"/>
+			<item value="org.springFramework.spring_rest"/>
+			<item value="org.springFramework.spring_mvc_customer_app"/>
+			<item value="org.springFramework.spring_forms_demo"/>
 			<item value="org.springFramework.comm.mvc_demo"/>
 			<item value="org.springFramework.mvc_demo1"/>
 			<item value="org.springFramework.mvc_demo"/>
@@ -37,6 +44,11 @@
 			<item value="org.springFramework"/>
 		</list>
 		<list key="artifactId">
+			<item value="spring-security-demo"/>
+			<item value="spring-rest-crm"/>
+			<item value="spring-rest"/>
+			<item value="spring-mvc-customer-app"/>
+			<item value="spring_forms_demo"/>
 			<item value="comm.mvc_demo"/>
 			<item value="mvc-demo1"/>
 			<item value="mvc-demo"/>
@@ -77,5 +89,21 @@
 	<section name="org.eclipse.m2e.core.pom.overview">
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\B4ibmjava24\Documents\recipe"/>
+			<item value="C:\Users\B4ibmjava24\Documents\airline-reservation"/>
+			<item value="C:\Users\B4ibmjava24\Documents\demo-h2"/>
+			<item value="C:\Users\B4ibmjava24\Documents\first-spring-boot"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
 	</section>
 </section>
