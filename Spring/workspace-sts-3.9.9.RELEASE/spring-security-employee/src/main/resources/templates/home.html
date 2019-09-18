@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<meta charset="UTF-8" />
+<title>Employees</title>
+</head>
+<body>
+	<h1>Employees</h1>
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">Employee ID</th>
+				<th scope="col">First Name</th>
+				<th scope="col">Last Name</th>
+				<th scope="col">Email ID</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="employee : ${employees}">
+				<td th:text="${employee.id}">-1</td>
+				<td th:text="${employee.firstName}">Not found</td>
+				<td th:text="${employee.lastName}">Not found</td>
+				<td th:text="${employee.email}">Not found</td>
+			</tr>
+		</tbody>
+	</table>
+	<br/>
+	<h2>Contract Employees</h2>
+	<br/>
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">Employee ID</th>
+				<th scope="col">First Name</th>
+				<th scope="col">Last Name</th>
+				<th scope="col">Email ID</th>
+				<th scope="col">Hourly Rate</th>
+				<th scope="col">Duration</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="contractEmployee : ${contractEmployees}">
+				<td th:text="${contractEmployee.id}">-1</td>
+				<td th:text="${contractEmployee.firstName}">Not found</td>
+				<td th:text="${contractEmployee.lastName}">Not found</td>
+				<td th:text="${contractEmployee.email}">Not found</td>
+				<td th:text="${contractEmployee.hourlyRate}">Not found</td>
+				<td th:text="${contractEmployee.duration}">Not found</td>
+			</tr>
+		</tbody>
+	</table>
+	<br/>
+	<h2>Contract Employees</h2>
+	<br/>
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">Employee ID</th>
+				<th scope="col">First Name</th>
+				<th scope="col">Last Name</th>
+				<th scope="col">Email ID</th>
+				<th scope="col">Salary</th>
+				<th scope="col">Commission</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="permanentEmployee : ${permanentEmployees}">
+				<td th:text="${permanentEmployee.id}">-1</td>
+				<td th:text="${permanentEmployee.firstName}">Not found</td>
+				<td th:text="${permanentEmployee.lastName}">Not found</td>
+				<td th:text="${permanentEmployee.email}">Not found</td>
+				<td th:text="${permanentEmployee.salary}">Not found</td>
+				<td th:text="${permanentEmployee.commission}">Not found</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
